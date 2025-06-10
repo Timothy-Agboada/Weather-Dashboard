@@ -1,0 +1,85 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.weather-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+
+.search-area { margin-bottom: 20px; }
+
+.search-area h1 { margin-bottom: 20px; color: #333; }
+
+#cityInput {
+    width: calc(100% - 24px); padding: 12px; border: 1px solid #ccc;
+    border-radius: 25px; font-size: 16px; margin-bottom: 10px; outline: none;
+}
+
+#unitSelect {
+    width: 50%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;
+    margin-bottom: 10px; background-color: #f9f9f9;
+}
+
+#searchButton {
+    width: 100%; padding: 12px; background-color: #9b59b6; color: white;
+    border: none; border-radius: 25px; cursor: pointer; font-size: 16px;
+    font-weight: bold; transition: background-color 0.3s ease;
+}
+
+#searchButton:hover { background-color: #71b7e6; }
+
+#loading-spinner {
+    border: 5px solid #f3f3f3; 
+    border-top: 5px solid #5b9bd5; 
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#weather-info { animation: fadeIn 0.5s ease-in-out; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+#cityName { font-size: 2em; margin-bottom: 10px; }
+
+#weather-main { display: flex; justify-content: center; align-items: center; margin: 10px 0; }
+
+#temperature { font-size: 4em; font-weight: bold; color: #333; }
+
+#weatherIcon { width: 100px; height: 100px; }
+
+#weatherDescription { text-transform: capitalize; font-size: 1.2em; margin-bottom: 20px; }
+
+.weather-details { display: flex; justify-content: space-around; text-align: center; }
+
+.detail-item p:first-child { font-weight: bold; color: #555; }
+
+#error-message {
+    color: #d9534f; font-weight: bold; padding: 10px; background-color: #f2dede;
+    border: 1px solid #ebccd1; border-radius: 5px; margin-top: 20px; animation: fadeIn 0.5s;
+}
+
+.hidden { display: none; }
